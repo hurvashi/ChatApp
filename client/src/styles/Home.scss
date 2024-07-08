@@ -1,0 +1,89 @@
+.homeContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+
+    .peopleContainer{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        background-color: rgb(229, 236, 253);
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        gap:10px;
+
+        .people{
+            background-color: white;
+            width: 95%;
+            // height: 95%;
+            border-radius: 10px;
+            flex:1;
+            
+        }
+    }
+    .conversationContainer{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        background-color: rgb(229, 236, 253);
+        justify-content: center;
+        align-items: center;
+
+        .conversations{
+            background-color: white;
+            width: 95%;
+            height: 95%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .messages{
+                padding: 20px;
+                width:100%;
+               overflow-y: scroll;
+               
+            }
+
+            .msgBox{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fff;
+                padding: 20px;
+                
+
+               .msgInput{
+                width:87%;
+                height:70px;
+                background-color: rgb(233, 229, 229);
+                border:none;
+                border-radius: 10px;
+                color: black;
+                font-size: 1rem;
+                padding: 10px;
+               }
+               button{
+                background-color: rgb(51, 115, 253);
+                width:100px;
+                height: 70px;
+                font-size: 1.2rem;
+                opacity: 1;
+                transition: all ease 0.3s;
+
+                &:hover{
+                    opacity: 0.9;
+                
+                }
+               }
+
+               
+            }
+        }
+    }
+}
