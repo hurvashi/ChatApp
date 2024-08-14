@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Conversation.scss'
 
-export const Conversation = () => {
+export const Conversation = ({message , own}) => {
   return (
-    <div className='message'>
+    <div className={own ? "message own" : "message"}>
     <div className="messageTop">
       <img
         className="messageImg"

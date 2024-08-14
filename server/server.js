@@ -2,6 +2,8 @@ const express = require('express')
 require('dotenv').config();
 const connectDB = require('./db/connect')
 const auth = require('./routes/auth')
+const conversations = require('./routes/conversations')
+const messagesRoute = require('./routes/messages')
 const cors = require('cors')
 
 
@@ -9,8 +11,13 @@ const cors = require('cors')
 const app = express();
 
 app.use(express.json());
-app.use(cors())
-app.use('/api/v1/auth',auth)
+app.use(cors());
+
+
+app.use('/api/v1/auth',auth);
+app.use('/api/v1/conversations',conversations);
+app.use('/api/v1/messages',messagesRoute);
+
 
 
 
